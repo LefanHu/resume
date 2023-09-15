@@ -3,6 +3,28 @@
 %-------------------------------------------------------------------------------
 \cvsection{Projects}
 
+\usepackage{tikz}
+
+\newcommand{\ExternalLink}{%
+    \tikz[x=1.2ex, y=1.2ex, baseline=-0.05ex]{% 
+        \begin{scope}[x=1ex, y=1ex]
+            \clip (-0.1,-0.1) 
+                --++ (-0, 1.2) 
+                --++ (0.6, 0) 
+                --++ (0, -0.6) 
+                --++ (0.6, 0) 
+                --++ (0, -1);
+            \path[draw, 
+                line width = 0.5, 
+                rounded corners=0.5] 
+                (0,0) rectangle (1,1);
+        \end{scope}
+        \path[draw, line width = 0.5] (0.5, 0.5) 
+            -- (1, 1);
+        \path[draw, line width = 0.5] (0.6, 1) 
+            -- (1, 1) -- (1, 0.6);
+        }
+    }
 
 %-------------------------------------------------------------------------------
 %	CONTENT
@@ -12,7 +34,7 @@
 %---------------------------------------------------------
   \cventry
     {Hack The North 2022 | Managed with Git} % Organisation
-    {\underline{DrawBot | \href{https://devpost.com/software/drawbot-ulof5z}{Link}}} % Project
+    {\underline{DrawBot | \href{https://devpost.com/software/drawbot-ulof5z}{View \ExternalLink}}} % Project
     {Waterloo, ON} % Location
     {Sept. 2022 - Sept. 2022} % Date(s)
     {
@@ -30,7 +52,7 @@
 %---------------------------------------------------------
   \cventry
     {Hack The North 2021 | \textbf{Best Use of Google Cloud} | \textbf{Best Entrepreneurship Hack} | Managed with Git} % Organisation
-    {\underline{Hive-HQ - Winner | \href{https://devpost.com/software/hive-hq}{Link}}} % Project
+    {\underline{Hive-HQ - Winner | \href{https://devpost.com/software/hive-hq}{View \ExternalLink}}} % Project
     {Ottawa, ON} % Location
     {Sept. 2021 - Sept. 2021} % Date(s)
     {
@@ -46,7 +68,7 @@
 %---------------------------------------------------------
   \cventry
     {MLH Hacky Birthday 2021 | \textbf{Third Overall} | Managed with Git} % Organisation
-    {\underline{MaskPass - Winner | \href{https://devpost.com/software/mlh-birthday-ads}{Link}}} % Project
+    {\underline{MaskPass - Winner | \href{https://devpost.com/software/mlh-birthday-ads}{View \ExternalLink}}} % Project
     {Ottawa, ON} % Location
     {July 2021 - July 2021} % Date(s)
     {
@@ -62,14 +84,14 @@
 
   \cventry
     {Personal Project} % Organisation
-    {\underline{Heimdall Personal Dashboard | \href{https://heimdall.lefan.me}{Link}}} % Project
+    {\underline{Heimdall Personal Dashboard | \href{https://heimdall.lefan.me}{View \ExternalLink}}} % Project
     {Ottawa, ON} % Location
     {July 2021 - now} % Date(s)
     {
       \begin{cvitems} % Description(s) of project
         \item {A self hosted site using Cloudflare \& Oracle servers that present many self hosted services}
         % \item {Nginx reverse-proxy is used to proxy running docker instances to their respective subdomains on site}
-        % \item {Built using \textbf{SWAG}, \textbf{Docker}, \textbf{Oracle Cloud}, \textbf{Cloudflare}}
+        \item {Built using \textbf{SWAG}, \textbf{Docker}, \textbf{Oracle Cloud}, \textbf{Cloudflare}}
         \item {\textbf{Technical Skills:} Docker, Nginx, Authelia, MongoDB, AWS lambda, Networking \& Port Management}
       \end{cvitems}
     }
