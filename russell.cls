@@ -500,7 +500,7 @@
         {%
           \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
           % \href{https://www.\@linkedin}{\faLinkedin\acvHeaderIconSep\@linkedin}%
-          \href{https://www.\@linkedin}{\faLinkedin\acvHeaderIconSep linkedin}%
+          \href{https://www.\@linkedin}{\faLinkedin\acvHeaderIconSep Linkedin}%
         }%
       \ifthenelse{\isundefined{\@orcid}}%
         {}%
