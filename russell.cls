@@ -468,7 +468,8 @@
         {}%
         {%
           \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
-          \href{https://\@homepage}{\faHome\acvHeaderIconSep\@homepage}%
+          % \href{https://\@homepage}{\faHome\acvHeaderIconSep\@homepage}%
+          \href{https://\@homepage}{\faHome\acvHeaderIconSep Portfolio}%
         }%
       \ifthenelse{\isundefined{\@github}}%
         {}%
