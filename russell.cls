@@ -469,7 +469,7 @@
         {%
           \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
           % \href{https://\@homepage}{\faHome\acvHeaderIconSep\@homepage}%
-            \href{https://\@homepage}{\faHome\acvHeaderIconSep Portfolio \ExternalLink\hspace{-0.5em}}%
+            \href{https://\@homepage}{\faHome\acvHeaderIconSep Portfolio - lefan.ca \ExternalLink\hspace{-0.5em}}%
         }%
       \ifthenelse{\isundefined{\@github}}%
         {}%
