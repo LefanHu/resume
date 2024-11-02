@@ -469,7 +469,7 @@
         {%
           \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
           % \href{https://\@homepage}{\faHome\acvHeaderIconSep\@homepage}%
-          \href{https://\@homepage}{\faHome\acvHeaderIconSep Portfolio}%
+            \href{https://\@homepage}{\faHome\acvHeaderIconSep Portfolio \ExternalLink\hspace{-0.5em}}%
         }%
       \ifthenelse{\isundefined{\@github}}%
         {}%
@@ -500,7 +500,7 @@
         {%
           \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
           % \href{https://www.\@linkedin}{\faLinkedin\acvHeaderIconSep\@linkedin}%
-          \href{https://www.\@linkedin}{\faLinkedin\acvHeaderIconSep Linkedin}%
+          \href{https://www.\@linkedin}{\faLinkedin\acvHeaderIconSep Linkedin \ExternalLink\hspace{-0.5em}}%
         }%
       \ifthenelse{\isundefined{\@orcid}}%
         {}%
