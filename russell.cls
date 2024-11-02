@@ -682,10 +682,10 @@
 % Define an environment for cvskill
 \newenvironment{cvskills}{%
   \vspace{\acvSectionContentTopSkip}
-  \vspace{-5.0mm} % -2mm originally
+  \vspace{-2.0mm} % -2mm originally
   \begin{center}
     \setlength\tabcolsep{1ex}
-    \setlength{\extrarowheight}{0pt}
+    \setlength{\extrarowheight}{-3pt} % originally 0pt
     \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} r L{\textwidth * \real{0.85}}}
 }{%
     \end{tabular*}
