@@ -1,25 +1,22 @@
 name: compile-resume
 on: [push]
 jobs:
-  paper:
+  compile:
     runs-on: ubuntu-latest
     env:
       # Edit here with the names of your latex file and directory (can use ".")
       DIR: .
-      FILE: resume.tex
+      FILE: resume
     steps:
       - name: Checkout
         uses: actions/checkout@v4.2.2
       - name: Install TeXlive
-        run: sudo apt-get update && sudo apt-get install texlive texlive-publishers texlive-science latexmk cm-super
+        run: sudo apt-get update && sudo apt-get install texlive texlive-full latexmk cm-super
       - name: LaTeX compile
         working-directory: ${{ env.DIR }}
         # Use lualatex instead of pdflatex
         run: |
-          lualatex ${{ env.FILE }}
-          bibtex ${{ env.FILE }}
-          lualatex ${{ env.FILE }}
-          lualatex ${{ env.FILE }}
+          latexmk -pdflatex=lualatex -pdf ${{ env.FILE }}
       - name: move
         run: mkdir -p github_artifacts && mv ${{ env.DIR }}/${{ env.FILE }}.pdf ./github_artifacts/
       - name: Upload pdf as artifact
