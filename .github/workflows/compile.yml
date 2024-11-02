@@ -1,4 +1,4 @@
-name: writeapaper
+name: compile-resume
 on: [push]
 jobs:
   paper:
@@ -19,7 +19,7 @@ jobs:
       - name: move
         run: mkdir -p github_artifacts && mv ${{ env.DIR }}/${{ env.FILE }}.pdf ./github_artifacts/
       - name: Upload pdf as artifact
-        uses: actions/upload-artifact@v4.1.2
+        uses: actions/upload-artifact@v4.4.3
         with:
           name: ${{ env.FILE }}.pdf
           path: ./github_artifacts
